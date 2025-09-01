@@ -1,4 +1,4 @@
-# OpenVAS installation from sources for Debian 12 systems.
+# OpenVAS installation from sources for Kali Linux (rolling-release) systems.
 
 This script automates the installation and configuration of OpenVAS (Greenbone Community Edition) from source on Debian 12 systems. It follows the Greenbone Community Edition guidelines to set up a secure and fully functional vulnerability scanning environment, adhering to principles of secure-by-design, least privilege, and defense-in-depth.
 
