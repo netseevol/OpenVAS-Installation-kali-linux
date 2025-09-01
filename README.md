@@ -18,7 +18,7 @@ The ``openvas_install.sh`` script installs OpenVAS and its dependencies, configu
 ## Usage
 
 ### 1. Prerequisites:
-- A **clean, fully updated Debian 12** system with internet access.
+- A **clean, fully updated Kali Linux** system with internet access.
 - Root privileges (the script must be run as root).
 - At least 1GB of free disk space in ``$HOME/source``, ``$HOME/build``, and ``$HOME/install`` directories.
 
