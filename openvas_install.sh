@@ -874,7 +874,7 @@ setting_up_postgresql() {
 		log ERROR "Failed to install PostgreSQL."
 		exit 1
 	fi
-	if ! run_command systemctl start postgresql@15-main; then
+	if ! run_command systemctl start postgresql@17-main; then
 		log ERROR "Failed to start PostgreSQL service."
 		exit 1
 	fi
