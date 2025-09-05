@@ -38,6 +38,7 @@ set_environment() {
 	export INSTALL_DIR=$HOME/install
 	export GNUPGHOME=/tmp/openvas-gnupg
 	export OPENVAS_GNUPG_HOME=/etc/openvas/gnupg
+    export DEBIAN_FRONTEND=noninteractive
 
 	# Check disk space for directories
 	for dir in "$SOURCE_DIR" "$BUILD_DIR" "$INSTALL_DIR"; do
