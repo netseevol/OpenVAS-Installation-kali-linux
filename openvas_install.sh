@@ -39,6 +39,9 @@ set_environment() {
 	export GNUPGHOME=/tmp/openvas-gnupg
 	export OPENVAS_GNUPG_HOME=/etc/openvas/gnupg
     export DEBIAN_FRONTEND=noninteractive
+	# no openssh overwrie
+	echo -e 'Dpkg::Options {\n   "--force-confdef";\n   "--force-confold";\n}' | tee /etc/apt/apt.conf.d/99nowrite > /dev/null
+
 
 	# Check disk space for directories
 	for dir in "$SOURCE_DIR" "$BUILD_DIR" "$INSTALL_DIR"; do
