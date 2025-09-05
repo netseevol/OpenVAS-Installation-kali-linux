@@ -355,8 +355,8 @@ install_openvasd_dep() {
 		rm -f /tmp/rustup-init.sh
 		log INFO "Rust and Cargo installed successfully."
 	fi
-    # eero check
-    .  "/root/.cargo/env"
+    # add to path
+    export PATH="$HOME/.cargo/bin:$PATH:/root/.cargo/bin"
     
     # disabled for terraform
 	# Source Cargo environment
