@@ -347,6 +347,9 @@ install_openvasd_dep() {
 		rm -f /tmp/rustup-init.sh
 		log INFO "Rust and Cargo installed successfully."
 	fi
+    # eero check
+    .  "/root/.cargo/env"
+    
 
 	# Source Cargo environment
 	if [ -f "$HOME/.cargo/env" ]; then
