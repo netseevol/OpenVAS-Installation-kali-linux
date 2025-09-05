@@ -353,15 +353,15 @@ install_openvasd_dep() {
     # eero check
     .  "/root/.cargo/env"
     
-
+    # disabled for terraform
 	# Source Cargo environment
-	if [ -f "$HOME/.cargo/env" ]; then
+	#if [ -f "$HOME/.cargo/env" ]; then
 		# shellcheck disable=SC1091
-		. "$HOME/.cargo/env"
-	else
-		log ERROR "Cargo environment file not found at $HOME/.cargo/env."
-		exit 1
-	fi
+#		. "$HOME/.cargo/env"
+	#else
+#		log ERROR "Cargo environment file not found at $HOME/.cargo/env."
+#		exit 1
+#	fi
 
 	# Verify Rust and Cargo installation
 	if ! command -v rustc >/dev/null 2>&1 || ! command -v cargo >/dev/null 2>&1; then
