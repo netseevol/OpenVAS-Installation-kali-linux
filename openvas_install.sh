@@ -27,6 +27,10 @@
 # Section: Environment Setup
 # -----------------------------------
 
+export DEBIAN_FRONTEND=noninteractive
+echo -e 'Dpkg::Options {\n   "--force-confdef";\n   "--force-confold";\n}' > /etc/apt/apt.conf.d/99nowrite
+
+
 # Sets up environment variables for the installation process.
 # Creates consistent paths for source, build, and install directories.
 set_environment() {
@@ -41,12 +45,7 @@ set_environment() {
     export DEBIAN_FRONTEND=noninteractive
 	# no openssh overwrie
     
-    cat <<EOF > /etc/apt/apt.conf.d/99nowrite
-    Dpkg::Options {
-    \"--force-confdef\";
-    \"--force-confold\";
-    }
-    EOF
+    
 
 
 	# Check disk space for directories
